@@ -13,7 +13,7 @@ class BaseModel:
         if kwargs:
             del kwargs["__class__"]
             for key, val in kwargs.items():
-                if key in ["create_at", "update_at"]:
+                if key in ["created_at", "updated_at"]:
                     val = datetime.strptime(val, "%Y-%m-%dT%H:%M:%S.%f")
                 setattr(self, key, val)
         else:
@@ -21,8 +21,9 @@ class BaseModel:
             """ Generate id for the objet in str format """
             self.created_at = datetime.now()
             """ Generate date of the creation objet """
-            self.update_at = datetime.now()
+            self.updated_at = datetime.now()
             """ Generate date of the update modification of the objets """
+            models.storage.new(self)
 
     def __str__(self):
         """ Print all atributes of the objets """
@@ -36,7 +37,7 @@ class BaseModel:
         Updates the public instance attribute
         updated_at with the current datetime
         """
-        self.update_at = datetime.now()
+        self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
@@ -46,6 +47,6 @@ class BaseModel:
         """
         dicti = self.__dict__.copy()
         dicti["__class__"] = type(self).__name__
-        dicti["create_at"] = self.created_at.isoformat()
-        dicti["update_at"] = self.update_at.isoformat()
+        dicti["created_at"] = self.created_at.isoformat()
+        dicti["updated_at"] = self.updated_at.isoformat()
         return dicti

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+AirBnB Console
 """
 import cmd
 from models import storage  # import file_storage
@@ -13,7 +14,9 @@ from models.review import Review  # import class Review
 
 
 class HBNBCommand(cmd.Cmd):
-
+    """
+    Console
+    """
     prompt = '(hbnb) '
     __classes = ['BaseModel',
                  'Amenity',
@@ -41,49 +44,90 @@ class HBNBCommand(cmd.Cmd):
         Creates a new instance of BaseModel, saves it
         (to the JSON file) and prints the id
         """
-        args = arg.split( )
-        if not args:
+        if not arg:
             print('** class name missing **')
-        elif args[0] not in self.__classes:
+            return
+        args = arg.split( )
+        if args[0] not in self.__classes:
             print("** class doesn't exist **")
         else:
             obj = eval(args[0])()
             obj.save()
             print(obj.id)
+            
+    def verify(self, arg, choose):
+        """ Do the validation of the arguments pass """
+        if not arg:
+            print("** class name missing **")
+            return 0
+        args = arg.split( )
+        if args[0] not in self.__classes:
+            print("** class doesn't exist **")
+            return 0
+        if len(args) == 1:
+            print("** instance id missing **")
+            return 0
+        obj = storage.all()
+        k = "{}.{}".format(args[0],args[1])
+        for key, val in obj.items():
+            if key == k:
+                if choose == 1:
+                    return val
+                if choose == 2:
+                    return k
+        print("** no instance found **")
 
     def do_show(self, arg):
         """
         Prints the string representation of an
         instance based on the class name and id
         """
-        args = arg.split( )
-        k = "{}.{}".format(args[0],args[1])
-        print(storage.all())
-        for key, val in storage.all().items():
-            if key == k:
-                print(val.to_dict())
-                return
+        obj = self.verify(arg, 1)
+        if obj:
+            print(obj)
 
     def do_destroy(self, arg):
         """
         Deletes an instance based on the class name
         and id (save the change into the JSON file).
         """
-        pass
+        obj = self.verify(arg, 2)
+        if obj:
+            del storage.all()[obj]
+            storage.save()
 
     def do_all(self, arg):
         """
         Prints all string representation of all
         instances based or not on the class name.
         """
-        pass
+        if arg:
+            args = arg.split( )
+            if args[0] not in self.__classes:
+                print("** class doesn't exist **")
+                return
+            for val in storage.all().values():
+                if args[0] == type(val).__name__:
+                    print(val)
+        else:
+            [print(val) for val in storage.all().values()]
 
     def do_update(self, arg):
         """
         Updates an instance based on the class name and id
         by adding or updating attribute (save the change into the JSON file).
         """
-        pass
+        obj = self.verify(arg, 1)
+        if obj:
+            args = arg.split( )
+            if len(args) < 3:
+                print("** attribute name missing **")
+                return
+            if len(args) < 4:
+                print("** value missing **")
+                return
+            setattr(obj, args[2], args[3])
+            obj.save()
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
