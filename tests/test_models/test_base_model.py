@@ -67,11 +67,10 @@ class TestBase_Model(unittest.TestCase):
         dict_obj = self.obj.to_dict()
         self.assertIsInstance(dict_obj, dict)
         for key, value in dict_obj.items():
-            self.assertEqual('BaseModel', value['__class__'])
-            # flag = 0
-            # if dict_obj['__class__'] == 'BaseModel':
-            #     flag += 1
-            # self.assertTrue(flag == 1)
+            check = 0
+            if dict_obj['__class__'] == 'BaseModel':
+                check += 1
+            self.assertTrue(check == 1)
         for key, value in dict_obj.items():
             if key == 'created_at':
                 self.assertIsInstance(value, str)
