@@ -11,6 +11,7 @@ from models.place import Place  # import class Place
 from models.state import State  # import class State
 from models.review import Review  # import class Review
 
+
 class FileStorage:
     """
     Class FileStorage
@@ -19,22 +20,21 @@ class FileStorage:
     __file_path = 'file.json'
     __objects = {}
 
-
     def __init__(self):
         """ Constructor """
-        
+
     def all(self):
         """ Returns the dictionary __objects """
         return self.__objects
-        
+
     def new(self, obj):
         """
-        Sets in __objects the obj with 
+        Sets in __objects the obj with
         key <obj class name>.id
         """
         key = "{}.{}".format(type(obj).__name__, obj.id)
         self.__objects[key] = obj
-        
+
     def save(self):
         """
         Serializes __objects to the

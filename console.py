@@ -47,7 +47,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print('** class name missing **')
             return
-        args = arg.split( )
+        args = arg.split(" ")
         if args[0] not in self.__classes:
             print("** class doesn't exist **")
         else:
@@ -60,7 +60,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return 0
-        args = arg.split( )
+        args = arg.split(" ")
         if args[0] not in self.__classes:
             print("** class doesn't exist **")
             return 0
@@ -68,7 +68,7 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
             return 0
         obj = storage.all()
-        k = "{}.{}".format(args[0],args[1])
+        k = "{}.{}".format(args[0], args[1])
         for key, val in obj.items():
             if key == k:
                 if choose == 1:
@@ -102,7 +102,7 @@ class HBNBCommand(cmd.Cmd):
         instances based or not on the class name.
         """
         if arg:
-            args = arg.split( )
+            args = arg.split(" ")
             if args[0] not in self.__classes:
                 print("** class doesn't exist **")
                 return
@@ -119,7 +119,7 @@ class HBNBCommand(cmd.Cmd):
         """
         obj = self.verify(arg, 1)
         if obj:
-            args = arg.split( )
+            args = arg.split(" ")
             if len(args) < 3:
                 print("** attribute name missing **")
                 return
