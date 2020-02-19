@@ -1,55 +1,55 @@
 #!/usr/bin/python3
-'''Tests for User class'''
+'''Tests for Amenity class'''
 import models
 import os
 import os.path
 import unittest
-from models.user import User
+from models.amenity import Amenity
 from models.engine import file_storage
 from models.engine.file_storage import FileStorage
 
 
-class TestUser(unittest.TestCase):
-    '''Tests for User class'''
+class TestAmenity(unittest.TestCase):
+    '''Tests for Amenity class'''
 
     def setUp(self):
-        '''Object User created'''
-        self.obj = User()
+        '''Object Amenity created'''
+        self.obj = Amenity()
 
     def test_docstring(self):
         '''Check if methods, classes
         and modules have docstring'''
         msj = "Module doesn't have docstring"
-        self.assertIsNotNone(models.user.__doc__, msj)  # Modules
+        self.assertIsNotNone(models.amenity.__doc__, msj)  # Modules
         msj = "Class doesn't have docstring"
-        self.assertIsNotNone(User.__doc__, msj)  # Classes
+        self.assertIsNotNone(Amenity.__doc__, msj)  # Classes
 
     def test_executable_file(self):
         '''Check if file have permissions to execute'''
         # Check for read access
-        is_read_true = os.access('models/user.py', os.R_OK)
+        is_read_true = os.access('models/amenity.py', os.R_OK)
         self.assertTrue(is_read_true)
         # Check for write access
-        is_write_true = os.access('models/user.py', os.W_OK)
+        is_write_true = os.access('models/amenity.py', os.W_OK)
         self.assertTrue(is_write_true)
         # Check for execution access
-        is_exec_true = os.access('models/user.py', os.X_OK)
+        is_exec_true = os.access('models/amenity.py', os.X_OK)
         self.assertTrue(is_exec_true)
 
     def test_instance(self):
-        '''Check if obj is an instance of User'''
-        self.assertIsInstance(self.obj, User)
+        '''Check if obj is an instance of Amenity'''
+        self.assertIsInstance(self.obj, Amenity)
 
     def test_id(self):
         '''Compare if id of two instances are different'''
-        user1 = User()
-        user2 = User()
-        self.assertNotEqual(user1.id, user2.id)
+        amenity1 = Amenity()
+        amenity2 = Amenity()
+        self.assertNotEqual(amenity1.id, amenity2.id)
 
     def test_str(self):
         '''Check if the output of str is in the correct format'''
         _dict = self.obj.__dict__
-        string1 = "[User] ({}) {}".format(self.obj.id, _dict)
+        string1 = "[Amenity] ({}) {}".format(self.obj.id, _dict)
         string2 = str(self.obj)
         self.assertEqual(string1, string2)
 
@@ -67,9 +67,9 @@ class TestUser(unittest.TestCase):
         dict_obj = self.obj.to_dict()
         self.assertIsInstance(dict_obj, dict)
         for key, value in dict_obj.items():
-            self.assertEqual('User', value['__class__'])
+            self.assertEqual('Amenity', value['__class__'])
             # flag = 0
-            # if dict_obj['__class__'] == 'User':
+            # if dict_obj['__class__'] == 'Amenity':
             #     flag += 1
             # self.assertTrue(flag == 1)
         for key, value in dict_obj.items():
@@ -83,7 +83,7 @@ class TestUser(unittest.TestCase):
         self.obj.name = "Betty"
         self.obj.my_number = 89
         obj_json = self.obj.to_dict()
-        obj_kwargs = User(**obj_json)
+        obj_kwargs = Amenity(**obj_json)
         self.assertNotEqual(obj_kwargs, self.obj)
 
     def test_using_json(self):
