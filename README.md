@@ -1,6 +1,6 @@
 # AirBnB_clone
 
-AirBnB Clone Project.
+AirBnB Clone Project. Airbnb is a company that connects users who want to rent or lease places to vacation or temporarily. This is a Holberton school exercise that consists in the construction of the first part of the backend of the page, the console or interpreter. 
 
 # Objectives
 
