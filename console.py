@@ -54,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
             obj = eval(args[0])()
             obj.save()
             print(obj.id)
-            
+
     def verify(self, arg, choose):
         """ Do the validation of the arguments pass """
         if not arg:
