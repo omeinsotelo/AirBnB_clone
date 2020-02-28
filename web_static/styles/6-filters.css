@@ -47,3 +47,16 @@ section.filters h4 {
 	font-size: 14px;
 	font-weight: 400;
 }
+.popover{
+	display: none;
+	background:#FAFAFA;
+	width:100%;
+	border:1px solid #DDDDDD;
+	border-radius: 4px;
+}
+.popover h2{
+	font-size:16px;
+}
+.locations:hover .popover{
+	display: block;
+}
