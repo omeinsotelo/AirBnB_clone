@@ -29,3 +29,21 @@ section.filters button {
 section.filters button:hover{
 	opacity: 90%;
 }
+.locations {
+	height: 100%;
+	width: 25%;
+	border-right: 1px solid #DDDDDD;
+
+}
+.amenities {
+	height: 100%;
+	width: 25%;
+	
+}
+section.filters h3 {
+	font-weight: 600;
+}
+section.filters h4 {
+	font-size: 14px;
+	font-weight: 400;
+}
