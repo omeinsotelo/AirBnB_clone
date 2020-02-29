@@ -18,6 +18,7 @@ Version: 1.0
 	flex-flow: row nowrap;
 	align-content: space-between;
 	align-items:center;
+	justify-content: flex-end;
 }
 section.filters button {
 	font-size: 18px;
@@ -31,35 +32,34 @@ section.filters button {
 	cursor:pointer;
 	border:none;
 }
-section.filters button:hover{
+section.filters button:hover {
 	opacity: 0.9;
 }
 .locations {
 	width: 25%;
+	height: 100%;
 	position: relative;
-	flex:2;
-	padding:0 10px;
+	flex: 1;
+	border-right: 1px solid #DDDDDD;
 }
 .amenities {
 	width: 25%;
+	height: 100%;
 	position: relative;
-	flex:2;
+	flex: 1;
 }
-
-
 section.filters h3 {
 	font-weight: 600;
-	margin-left:5px;
+	margin-left:40px;
+	margin-block-end: 0 !important;
 }
 section.filters h4 {
 	font-size: 14px;
 	font-weight: 400;
-	margin-left:5px;
+	margin-left:40px;
+	margin-block-start: 0 !important;
 }
-.border{
-	border-right: 1px solid #DDDDDD;
-}
-.popover{
+.popover {
 	display: none;
 	background:#FAFAFA;
 	width:100%;
@@ -67,12 +67,15 @@ section.filters h4 {
 	border-radius: 4px;
 	position: absolute;
 	z-index: 1;
-	margin-top:-10px;
-	margin-left: -10px;
+	margin-top:-3px;
+	padding: 30px 0;
 }
-.popover h2{
+.popover h2 {
 	font-size:16px;
 }
-.locations:hover .popover, .amenities:hover .popover{
+.locations:hover .popover, .amenities:hover .popover {
 	display: block;
+}
+.popover li {
+	margin: 10px 0 10px 40px;
 }

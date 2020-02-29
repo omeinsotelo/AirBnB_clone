@@ -18,6 +18,7 @@ Version: 1.0
 	flex-flow: row nowrap;
 	align-content: space-between;
 	align-items:center;
+	justify-content: flex-end;
 }
 section.filters button {
 	font-size: 18px;
@@ -36,26 +37,25 @@ section.filters button:hover{
 }
 .locations {
 	width: 25%;
+	height: 100%;
 	position: relative;
-	flex:2;
-	padding:0 10px;
+	flex: 1;
+	border-right: 1px solid #DDDDDD;
 }
 .amenities {
 	width: 25%;
+	height: 100%;
 	position: relative;
-	flex:2;
+	flex: 1;
 }
-
-
 section.filters h3 {
 	font-weight: 600;
 	margin-left:5px;
+	margin-block-end: 0 !important;
 }
 section.filters h4 {
 	font-size: 14px;
 	font-weight: 400;
 	margin-left:5px;
-}
-.border{
-	border-right: 1px solid #DDDDDD;
+	margin-block-start: 0 !important;
 }

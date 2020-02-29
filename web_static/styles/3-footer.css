@@ -16,4 +16,6 @@ footer {
     line-height: 60px;
     border: none;
     border-top: 1px solid #CCCCCC;
+    position: fixed;
+    bottom:0;
 }
