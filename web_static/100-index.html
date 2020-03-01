@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- START HEAD -->
+    <head>
+        <!-- TITLE PAGE -->
+        <title>AirBnB Clone</title>
+        <!-- CHARACTER SET -->
+        <meta charset="utf-8">
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" sizes="16x16" href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/icon.png">
+        <!-- STYLE COMMON -->
+        <link rel="stylesheet" href="styles/4-common.css">
+        <!-- STYLE HEADER -->
+        <link rel="stylesheet" href="styles/3-header.css">
+        <!-- STYLE FOOTER -->
+        <link rel="stylesheet" href="styles/3-footer.css">
+        <!-- STYLE SEARCH -->
+	<link rel="stylesheet" href="styles/6-filters.css">
+	<!-- STYLE PLACES -->
+        <link rel="stylesheet" href="styles/100-places.css">
+
+    </head>
+    <!-- ENDS HEAD -->
+    <!-- START BODY -->
+    <body>
+        <!-- START HEADER -->
+        <header>
+             <!-- LOGO CONTENT -->
+            <div class="logocontent"></div>
+        </header>
+        <!-- ENDS HEADER -->
+        <!-- START SEARCH -->
+        <div class="container">
+		<!-- START SECTION FILTERS -->
+            <section class="filters">  
+		<!-- LOCATION -->
+		<div class="locations">
+			<h3>States</h3>
+			<h4>California, Alabama</h4>
+			<!-- START ACORDEON -->
+			<ul class="popover">
+				<!-- STATES LI 1 -->
+				<li>
+					<h2>California</h2>
+					<!-- CITIES UL 1 -->
+					<ul>
+						<li>Los Angeles</li>
+						<li>San francisco</li>
+					</ul>
+				</li >
+				<!-- STATES LI 2 -->
+				<li>
+					<h2>Alabama</h2>
+					<!-- CITIES UL 2 -->
+					<ul>
+						<li>Birmingham</li>
+						<li>Orange Beach</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- ENDS ACORDEON -->
+		</div>
+		<!-- AMENITIES -->
+		<div class="amenities">
+			<h3>Amenities</h3>
+			<h4>Internet, Kitchen</h4>
+			<!-- UL AMENITIES -->
+			<ul class="popover">
+				<li>Internet</li>
+				<li>Kitchen</li>
+				<li>Pool</li>
+				<li>Room service</li>
+			</ul>
+		</div>
+
+  <!-- BUTTON SEARCHE -->
+  <button>Search</button>
+
+	    </section>
+	    <!-- ENDS SECTION FILTERS -->
+	    <!-- START SECTION PLACES -->
+	    <section class="places">
+		<h1>Places</h1>
+		<!-- START CONTENT ARTICLES -->
+		<div class="placesArticles">
+			<!-- START ARTICLE 1 -->
+			<article>
+			<!-- START DIV TOP PLACES -->
+			<div class="topPlaces">
+				<!-- TITLE TYPE OF PLACE -->
+				<h2>My home</h2>
+				<!-- START DIV PRICE -->
+				<div class="price_by_night">
+					<span>$80</span>
+				</div>
+				<!-- END DIV PRICE -->
+			</div>
+			<!-- ENDS DIV TOP PLACES -->
+				<!-- START DIV INFORMATION -->
+				<div class="information">
+					<!-- DIV MAX-GUEST -->
+					<div class="max_guest">
+					<span>2 Guest</span>
+					</div>
+					<!-- DIV NUMBER ROOOMS -->
+					<div class="number_rooms">
+						<span>2 Bedrooms</span>
+					</div>
+					<!-- DIV NUMBER BATHROOMS -->
+					<div class="number_bathrooms">
+						<span>1 Badrooms</span>
+					</div>
+				</div>
+				<!-- ENDS DIV INFORMATION -->
+				<!-- START DIV USER -->
+				<div class="user">
+					<span><b>Owner:</b> John Lennon</span>
+				</div>
+				<!-- ENDS DIV USER -->
+				<!-- START DIV DESCRIPTION -->
+				<div class="description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab consequatur obcaecati sequi, nesciunt ipsum corrupti excepturi doloribus impedit laboriosam omnis nisi nemo hic, assumenda quia dolorem possimus est quos.</p>
+				</div>
+                <!-- ENDS DIV DESCRIPTION -->
+                <!-- START DIV PLACES AMENITIES -->
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li class="tv">
+                            <div class="imgAmenitiesTv"></div>
+                            <span>TV</span>
+                        </li>
+                        <li class="wifi">
+                            <div class="imgAmenitiesWifi"></div>
+                            <span>Wifi</span>
+                        </li>
+                        <li class="pet">
+                            <div class="imgAmenitiesPet"></div>
+                            <span>Pet friendly</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ENDS DIV PLACES AMENITIES -->
+                <!-- START DIV PLACES REVIEWS -->
+                <div class="reviews">
+                    <h2>Reviews</h2>
+                    <ul>
+                        <li>
+                            <h3>From Bob Dylan the 27th January 2017</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores dicta officia illo est sint aut accusantium nostrum. Doloremque temporibus tenetur excepturi nisi et iure sunt numquam dicta, corrupti esse?</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ENDS DIV PLACES REVIEWS -->
+			</article>
+			<!-- ENDS ARTICLE 1 -->
+			<!-- START ARTICLE 2 -->
+			<article>
+				<!-- TITLE TYPE OF PLACE -->
+				<!-- START DIV TOP PLACES -->
+				<div class="topPlaces">
+					<h2>Tiny house</h2>
+					<!-- START DIV PRICE -->
+					<div class="price_by_night">
+						<span>$65</span>
+					</div>
+					<!-- END DIV PRICE -->
+				</div>
+				<!-- ENDS DIV TOP PLACES -->
+				<!-- START DIV INFORMATION -->
+				<div class="information">
+					<!-- DIV MAX-GUEST -->
+					<div class="max_guest">
+						<span>2 Guest</span>
+					</div>
+					<!-- DIV NUMBER ROOOMS -->
+					<div class="number_rooms">
+						<span>2 Bedrooms</span>
+					</div>
+					<!-- DIV NUMBER BATHROOMS -->
+					<div class="number_bathrooms">
+						<span>1 Badrooms</span>
+					</div>
+				</div>
+				<!-- ENDS DIV INFORMATION -->
+				<!-- START DIV USER -->
+				<div class="user">
+					<span><b>Owner:</b> John Lennon</span>
+				</div>
+				<!-- ENDS DIV USER -->
+				<!-- START DIV DESCRIPTION -->
+				<div class="description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab consequatur obcaecati sequi, nesciunt ipsum corrupti excepturi doloribus impedit laboriosam omnis nisi nemo hic, assumenda quia dolorem possimus est quos.</p>
+				</div>
+                <!-- ENDS DIV DESCRIPTION -->
+                <!-- START DIV PLACES AMENITIES -->
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li class="tv">
+                            <div class="imgAmenitiesTv"></div>
+                            <span>TV</span>
+                        </li>
+                        <li class="wifi">
+                            <div class="imgAmenitiesWifi"></div>
+                            <span>Wifi</span>
+                        </li>
+                        <li class="pet">
+                            <div class="imgAmenitiesPet"></div>
+                            <span>Pet friendly</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ENDS DIV PLACES AMENITIES -->
+                <!-- START DIV PLACES REVIEWS -->
+                <div class="reviews">
+                    <h2>Reviews</h2>
+                    <ul>
+                        <li>
+                            <h3>From Bob Dylan the 27th January 2017</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores dicta officia illo est sint aut accusantium nostrum. Doloremque temporibus tenetur excepturi nisi et iure sunt numquam dicta, corrupti esse?</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ENDS DIV PLACES REVIEWS -->
+			</article>
+			<!-- ENDS ARTICLE 2 -->
+			<!-- START ARTICLE 3 -->
+			<article>
+				<!-- START DIV TOP PLACES -->
+				<div class="topPlaces">
+					<!-- TITLE TYPE OF PLACE -->
+					<h2>A suite</h2>
+					<!-- START DIV PRICE -->
+					<div class="price_by_night">
+						<span>$199</span>
+					</div>
+					<!-- END DIV PRICE -->
+				</div>
+				<!-- ENDS DIV TOP PLACES -->
+				<!-- START DIV INFORMATION -->
+				<div class="information">
+					<!-- DIV MAX-GUEST -->
+					<div class="max_guest">
+						<span>2 Guest</span>
+					</div>
+					<!-- DIV NUMBER ROOOMS -->
+					<div class="number_rooms">
+						<span>2 Bedrooms</span>
+					</div>
+					<!-- DIV NUMBER BATHROOMS -->
+					<div class="number_bathrooms">
+						<span>1 Badrooms</span>
+					</div>
+				</div>
+				<!-- ENDS DIV INFORMATION -->
+				<!-- START DIV USER -->
+				<div class="user">
+					<span><b>Owner:</b> John Lennon</span>
+				</div>
+				<!-- ENDS DIV USER -->
+				<!-- START DIV DESCRIPTION -->
+				<div class="description">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab consequatur obcaecati sequi, nesciunt ipsum corrupti excepturi doloribus impedit laboriosam omnis nisi nemo hic, assumenda quia dolorem possimus est quos.</p>
+				</div>
+                <!-- ENDS DIV DESCRIPTION -->
+                <!-- START DIV PLACES AMENITIES -->
+                <div class="amenities">
+                    <h2>Amenities</h2>
+                    <ul>
+                        <li class="tv">
+                            <div class="imgAmenitiesTv"></div>
+                            <span>TV</span>
+                        </li>
+                        <li class="wifi">
+                            <div class="imgAmenitiesWifi"></div>
+                            <span>Wifi</span>
+                        </li>
+                        <li class="pet">
+                            <div class="imgAmenitiesPet"></div>
+                            <span>Pet friendly</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ENDS DIV PLACES AMENITIES -->
+                <!-- START DIV PLACES REVIEWS -->
+                <div class="reviews">
+                    <h2>Reviews</h2>
+                    <ul>
+                        <li>
+                            <h3>From Bob Dylan the 27th January 2017</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolores dicta officia illo est sint aut accusantium nostrum. Doloremque temporibus tenetur excepturi nisi et iure sunt numquam dicta, corrupti esse?</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ENDS DIV PLACES REVIEWS -->
+			</article>
+			<!-- ENDS ARTICLE 3 -->
+		</div>
+		<!-- ENDS CONTENT ARTICLES -->
+	    </section>
+	    <!-- ENDS SECTION PLACES -->
+        </div>
+        <!-- ENDS SEARCH -->
+        <!-- START FOOTER -->
+        <footer>
+            <!-- CONTEINER BRAND -->
+            <div>
+                <span>Holberton School</span>
+            </div>
+            <!-- ENDS CONTEINER BRAND -->
+        </footer>
+        <!-- ENDS FOOTER -->
+    </body>
+    <!-- ENDS BODY -->
+</html>
