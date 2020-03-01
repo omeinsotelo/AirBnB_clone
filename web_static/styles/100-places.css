@@ -96,4 +96,46 @@ section.places h1 {
 .description {
 	text-align: justify;
 }
+.places .amenities {
+    width: 100%;
+    margin-top: 40px;
+}
+.places .amenities h2,
+.reviews h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #DDDDDD;
+}
+.imgAmenitiesTv,
+.imgAmenitiesWifi,
+.imgAmenitiesPet {
+    width: 6%;
+}
+
+.imgAmenitiesTv {
+    content: url(../images/icon_tv.png);
+}
+.imgAmenitiesWifi {
+    content: url(../images/icon_wifi.png);
+}
+
+.places .amenities ul,
+.reviews ul {
+    margin: 0;
+    padding: 0;
+}
+
+.places .amenities li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.places .amenities span {
+    padding-left: 5px;
+    width: 94%;
+    align-self: center;
+}
+.imgAmenitiesPet {
+    content: url(../images/icon_pets.png);
+}
 

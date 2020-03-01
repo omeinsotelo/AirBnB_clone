@@ -18,4 +18,5 @@ footer {
     border-top: 1px solid #CCCCCC;
     position: fixed;
     bottom:0;
+    z-index: 1;
 }
