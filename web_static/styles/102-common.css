@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
+Theme Name: AirBnB Clone
+Theme URI: None
+Author: Paula Sotelo
+mail: omeinsotelo@gmail.com
+Version: 1.0
+*/
+/* CSS Document */
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction:column;
+    color: #484848;
+    font-size: 1em;
+    font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.container {
+    width:100%;
+	max-width: 1000px;
+	margin: 30px auto 30px auto;
+}
+ol, ul {
+    list-style: none;
+}
+
+/* RESPONSIVE 800 */
+@media only screen and (max-width: 800px) {
+}
+
+/* RESPONSIVE 600 */
+@media only screen and (max-width: 600px) {
+
+}
+/* RESPONSIVE 400 */
+@media only screen and (max-width: 400px) {
+    body {
+        overflow-x: hidden;
+    }
+}

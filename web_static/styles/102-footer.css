@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*
+Theme Name: AirBnB Clone
+Theme URI: None
+Author: Paula Sotelo
+mail: omeinsotelo@gmail.com
+Version: 1.0
+*/
+/* CSS Document */
+/* FOOTER STYLE */
+footer {
+    background: white;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    border: none;
+    border-top: 1px solid #CCCCCC;
+    position: fixed;
+    bottom:0;
+    z-index: 1;
+}

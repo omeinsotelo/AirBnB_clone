@@ -1,0 +1,213 @@
+@charset "utf-8";
+/*
+Theme Name: AirBnB Clone
+Theme URI: None
+Author: Paula Sotelo
+mail: omeinsotelo@gmail.com
+Version: 1.0
+*/
+/* CSS Document */
+/* CSS Filters */
+.filters {
+	background: white;
+	height: auto;
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	display:flex;
+	flex-flow: row nowrap;
+	align-content: space-between;
+	align-items:center;
+	justify-content:center;
+}
+.buttonFilter{
+	flex:1;
+	text-align: center;
+}
+
+.buttonFilter button {
+	font-size: 18px;
+	background: #FF5A5F;
+	color: #FFFFFF;
+	border-radius:  4px;
+	line-height: 48px; 
+	cursor:pointer;
+	border:none;
+	display: flex;
+	padding:3px auto;
+	align-items:center;
+	justify-content:center;
+	width: 70%;
+	margin: auto;
+}
+.buttonFilter button:hover {
+	opacity: 0.9;
+}
+
+.buttonFilter i {
+	color:#FFF;
+	display: none;
+}
+
+
+.locations {
+	width: 25%;
+	height: 100%;
+	position: relative;
+	flex: 1;
+	border-right: 1px solid #DDDDDD;
+}
+.amenities {
+	width: 25%;
+	height: 100%;
+	position: relative;
+	flex: 1;
+}
+section.filters h3 {
+	font-weight: 600;
+	margin-left: 40px;
+}
+section.filters h4 {
+	font-size: 1em;
+	font-weight: 400;
+	margin-left:40px;
+	margin-top: -14px;
+}
+.popover {
+	background:#FAFAFA;
+	width:100%;
+	border:1px solid #DDDDDD;
+	border-radius: 4px;
+	position: absolute;
+	z-index: 2;
+	margin-top:0;
+	padding: 30px 0;
+	display: none;
+}
+.popover h2 {
+	font-size:16px;
+}
+.locations:hover .popover, .amenities:hover .popover {
+	display: block;
+}
+.popover li {
+	margin: 10px 0 10px 40px;
+}
+
+
+/* RESPONSIVE 800 */
+@media only screen and (max-width: 800px) {
+}
+
+/* RESPONSIVE 600 */
+@media only screen and (max-width: 600px) {
+	.locations {
+		flex: 2;
+	}
+	.amenities {
+		flex: 2;
+	}
+	.buttonFilter button {
+		padding:15px;
+		align-items:center;
+		justify-content:center;
+		width: auto;
+		margin: auto;
+	}
+	.buttonFilter i {
+		display: block;
+	}
+
+	.buttonFilter button span{
+	display: none;
+	}
+	.popover li {
+		margin: 5px 0 5px 20px;
+	}
+}
+
+/* RESPONSIVE 400 */
+@media only screen and (max-width: 400px) {
+
+	.filters {
+		display:flex;
+		flex-flow: column;
+		align-content: space-around;
+		align-items:center;
+		justify-content:center;
+		width: 90%;
+		margin: auto;
+	}
+	.buttonFilter{
+		flex:1;
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+	}
+
+
+	.buttonFilter button {
+		font-size: 18px;
+		background: #FF5A5F;
+		color: #FFFFFF;
+		border-radius: none;
+		line-height: 48px; 
+		cursor:pointer;
+		border:none;
+		display: block;
+		width: 70%;
+		padding: 4px 0;
+		margin: 0 auto;
+	}
+	.buttonFilter i {
+		display: none;
+	}
+	.buttonFilter button span{
+		display: block;
+	}
+	.locations {
+		width: 100%;
+		flex: 1;
+		border-right: none;
+		border-bottom: 1px solid #DDDDDD;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	.amenities {
+		width: 100%;
+		flex: 1;
+		border-bottom: 1px solid #DDDDDD;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+
+	section.filters h3 {
+		font-weight: 600;
+		margin-left: 0;
+	}
+	section.filters h4 {
+		font-size: 1em;
+		font-weight: 400;
+		margin-left:0;
+		margin-top: -14px;
+	}
+	
+	.popover {
+		background:#FAFAFA;
+		width:100%;
+		border:1px solid #DDDDDD;
+		border-radius: 4px;
+		position: relative;
+		z-index: 2;
+		margin-top:0;
+		padding: 30px 0;
+		display: none;
+	}
+	.popover li ul li{
+		margin-left: -42px;
+	}
+}
