@@ -66,6 +66,31 @@
 
 Improve the page by adding responsive design to display correctly in mobile or small screens.
 
+# Files
+
+## All .html are the structure of webpage
+| **Folders** | Content |
+| styles | All my styles for the webpage |
+| images | All images used in the webpage 
+styles |
+| **Name** | **Description |
+| *-common.css | Global styles (body, ul, li and .container) |
+| *-footer.css | Styles for footer |
+| *-header.css | Styles for header |
+| *-filters.css | Styles for filter bar |
+| *-places.css | Styles for cards |
+
+## images
+
+- con_bath.png
+- icon_bed.png
+- icon_group.png
+- icon_pets.png
+- icon_tab.png
+- icon_tv.png
+- icon_wifi.png
+- logo_header.png
+
 
 # Author
 - Paula Sotelo - [omeinsotelo](https://github.com/omeinsotelo)
