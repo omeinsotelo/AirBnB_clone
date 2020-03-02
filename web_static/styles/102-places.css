@@ -178,15 +178,16 @@ section.places h1 {
 		position: relative;
 	}
 	.topPlaces h2 {
-		text-align: left;
-		padding-left: 40px;
+		text-align: center;
 	}
 	.price_by_night {
-		right: 20px;
 		height: 65px;
+		width: 65px;
 		min-width: 65px;
 		font-size: 1.5em;
 		line-height: 60px;
+		position: relative;
+		margin: 20px 0 20px 120px;
 	}
 	.places .amenities h2,
 	.reviews h2 {
