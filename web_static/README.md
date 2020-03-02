@@ -75,6 +75,8 @@ Improve the page by adding responsive design to display correctly in mobile or s
 | styles | All my styles for the webpage |
 | images | All images used in the webpage 
 styles |
+
+
 | **Name** | **Description** |
 | -------- | --------------- |
 | *-common.css | Global styles (body, ul, li and .container) |
