@@ -34,7 +34,7 @@ Version: 1.0
 	cursor:pointer;
 	border:none;
 	display: flex;
-	padding:3px auto;
+	padding:3px 0;
 	align-items:center;
 	justify-content:center;
 	width: 70%;
@@ -150,7 +150,6 @@ section.filters h4 {
 		font-size: 18px;
 		background: #FF5A5F;
 		color: #FFFFFF;
-		border-radius: none;
 		line-height: 48px; 
 		cursor:pointer;
 		border:none;
