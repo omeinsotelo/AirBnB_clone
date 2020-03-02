@@ -69,11 +69,14 @@ Improve the page by adding responsive design to display correctly in mobile or s
 # Files
 
 ## All .html are the structure of webpage
-| **Folders** | Content |
+
+| **Folders** | **Content** |
+| ----------- | ----------- |
 | styles | All my styles for the webpage |
 | images | All images used in the webpage 
 styles |
-| **Name** | **Description |
+| **Name** | **Description** |
+| -------- | --------------- |
 | *-common.css | Global styles (body, ul, li and .container) |
 | *-footer.css | Styles for footer |
 | *-header.css | Styles for header |
